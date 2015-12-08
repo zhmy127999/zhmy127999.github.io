@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>交大导航</title>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/anamination1.css" rel="stylesheet" type="text/css" />
+	<link href="css/iview.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/comun.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//键盘左右按钮动作
+			$(document).bind('keydown',function(event){
+				if(event.keyCode == '39' || event.keyCode == '37'){
+					event.preventDefault();
+				}
+				if(event.which=='39'){
+					$("body").stop().animate({scrollLeft:$("body").scrollLeft() + 700}, 100);
+				};
+				if(event.which=='37'){
+					$("body").stop().animate({scrollLeft:$("body").scrollLeft() - 700}, 100);
+				};
+			});
+			//
+			$(document).mousewheel(function(event, delta) {
+				//$("body").scrollLeft($("body").scrollLeft() - delta*200) 
+				$("body").stop().animate({scrollLeft:$("body").scrollLeft() - delta*200}, 10);
+				event.preventDefault(); 
+			});
+			
+			
+			$('#opciones').hide();
+					$('#settings').click(function(){
+						$('#opciones').slideToggle();
+						$(this).toggleClass("cerrar");
+				
+			});
+		});
+	</script>
+	
+	<script type="text/javascript" src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>	
+	<script src="js/iview.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#iview2').iView({
+				pauseTime: 7000,
+				pauseOnHover: true,
+				directionNav: true,
+				directionNavHide: false,
+				controlNav: true,
+				controlNavNextPrev: false,
+				controlNavTooltip: false,
+				nextLabel: "Próximo",
+				previousLabel: "Anterior",
+				playLabel: "Jugada",
+				pauseLabel: "Pausa",
+				timer: "360Bar",
+				timerBg: "#EEE",
+				timerColor: "#000",
+				timerDiameter: 40,
+				timerPadding: 4,
+				timerStroke: 8,
+				timerPosition: "bottom-left"
+			});
+		});
+	</script>
+</head>
+
+<body style="background-image:url(img/back5-1.jpg);no-repeat 0 0; background-attachment: fixed;">
+
+<div id="place">
+		<div id="page1" class="page">
+			<div id="box2">
+				<a  class="sicon small bg_color3" href="http://gs.xjtu.edu.cn/zhaos/" target="_new" 
+				style="background-image: url(img/icon/graduation.png)">
+					<div class="text1" >本科生招生</div>
+				</a>
+				<a  class="sicon small bg_color7" href="http://gs.xjtu.edu.cn/zhaos/" target="_new"
+				style="background-image: url(img/icon/graduation1.png)">
+					<div class="text1" >研究生招生</div>
+				</a>
+				<a  class="sicon big bg_color2" href="http://www.lib.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/book.png)">
+					<div class="text1">图书馆</div>
+				</a>
+				<a  class="sicon big bg_color7" href="http://xsc.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/students.png)">
+				<div class="text1" >学生处</div>
+				</a>
+				<a  class="sicon small bg_color4" href="http://202.117.3.96/front/1.html" target="_new"
+				style="background-image: url(img/icon/calendar.png)">
+					<div class="text1" >交大校历</div>
+				</a>
+				<a  class="sicon small bg_color3" href="http://map.xjtu.edu.cn:8080/map/" target="_new"
+				style="background-image: url(img/icon/flag.png)">
+					<div class="text1" >交大地图</div>
+				</a>
+				<a  class="sicon big bg_color4" href="http://dean.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/jiaowuchu.png)">
+					<div class="text1">教务处</div>
+				</a>
+				<a  class="sicon big bg_color10" href="http://job.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/jiuye.png)">
+					<div class="text1" >就业中心</div>
+				</a>
+			</div>
+				<a href="http://www.xjtu.edu.cn/" target="_new" class="sicon huge bg_color9"
+				style="background-image: url(img/icon/librarylogo.png)">
+					<div class="text1">交大首页</div>
+				</a>
+				<a  class="sicon small bg_color2" href="http://gr.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/teacher.png)">
+					<div class="text1" >教师主页</div>
+				</a>
+				<a  class="sicon small bg_color3" href="http://stu.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/studentsmail.png)">
+					<div class="text1">学生邮箱</div>
+				</a>
+				<a  class="sicon big bg_color11" href="http://meeting.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/lecture.png)">
+					<div class="text1" >讲座预告</div>
+				</a>
+			<div id="iview2">
+				<div data-iview:image="img/jdphoto1.jpg"></div>
+				<div data-iview:image="img/jdphoto2.jpg"></div>
+				<div data-iview:image="img/jdphoto3.jpg"></div>
+				<div data-iview:image="img/jdphoto4.jpg"></div>
+			</div>		
+			
+			<div id="box4" style="margin-left:5px;">
+				<a  class="sicon big bg_color7" href="http://zhidao.eeyes.net/" target="_new"
+				style="background-image: url(img/icon/jiaodazhidao.png);">
+				<div class="text1" >交大知道</div>
+				</a>
+						
+				
+				<a class="sicon big bg_color11" href="http://pt.xjtu6.edu.cn/" target="_new" 
+				style="background-image:url(img/icon/puti.png)">
+				<div class="text1">西交菩提</div>
+				</a>
+				
+				<a  class="sicon small bg_color4" href="http://portal.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/share.png)">
+				<div class="text1" >信息门户</div>
+				</a>
+				
+				<a class="sicon big bg_color2" href="http://meeting.xjtu.edu.cn" target="_new"
+				style="background-image: url(img/icon/acdamicresource.png)">
+				<div class="text1" >学术资源</div>
+				</a>
+				
+				<a class="sicon huge bg_color9" href="http://www.eeyes.net/" target="_new"
+				style="background-image: url(img/icon/logo.png)">
+				<div class="text1" >e瞳首页</div>
+				</a>
+				
+				<a class="sicon big bg_color2" href="http://bbs.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/bingmayong.png)">
+				<div class="text1" >BBS</div>
+				</a>
+				
+				<a  class="sicon small bg_color9" href="http://alumni.xjtu.edu.cn/web/guest" target="_new"
+				style="background-image: url(img/icon/alumnus.png)">
+				<div class="text1">校友网</div>
+				</a>
+				
+				<a  class="sicon small bg_color10" href="college/index.html" target="_new"
+				style="background-image: url(img/icon/college.png)">
+				<div class="text1" >学院</div>
+				</a>
+				
+				
+				
+				<a  class="sicon small bg_color5" href="http://gs.xjtu.edu.cn/zhaos/" target="_new"
+				style="background-image: url(img/icon/shuyuan.png)">
+				<div id=settings class="cerrar">Settings</div>
+				<div id=opciones>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+				  <p>懒人图库</p>
+
+			</div>
+				<div class="text1" >书院</div>
+				</a>
+				
+				<a class="sicon big bg_color5" href="http://tieba.baidu.com" target="_new"
+				style="background-image: url(img/icon/tieba.png)">
+				<div class="text1">交大贴吧</div>
+				</a>
+				
+				<a  class="sicon small bg_color12" href="http://tuanwei.tiaozhan.com/" target="_new"
+				style="background-image: url(img/icon/tuanwei.png)">
+				<div class="text1" >团委</div>
+				</a>
+				
+				<a class="sicon big bg_color3" href="http://noc.xjtu.edu.cn/" target="_new"
+				style="background-image: url(img/icon/wifi.png)">
+				<div class="text1">信网中心</div>
+				</a>
+			
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<div id="page1" class="page">
+			
+			<div id="box4">
+			
+			<div class="box3">
+			
+			<a class="sicon huge bg_color9" href="http://news.eeyes.net/" target="_new"
+			style="background-image: url(img/icon/newslogo.png)">
+			<div class="text1" >交大新闻</div>
+			</a>
+	
+			<a  class="sicon small bg_color10" href="http://www.12306.cn" target="_new"
+			style="background-image: url(img/icon/train.png)">
+			<div class="text1" >火车订票</div>
+			</a>
+	
+			<a class="sicon big bg_color2" href="http://www.taobao.com/" target="_new"
+			style="background-image: url(img/icon/taobao.png)">
+			<div class="text1">淘宝</div>
+			</a>
+	
+			<a class="sicon big bg_color5" href="http://www.youku.com/" target="_new"
+			style="background-image: url(img/icon/youku.png)">
+			<div class="text1" >优酷网</div>
+			</a>
+			
+			<a  class="sicon small bg_color4" href="http://www.kuaidi100.com/" target="_new"
+			style="background-image: url(img/icon/kuaidi.png)">
+			<div class="text1">快递</div>
+			</a>
+			
+			
+			
+			
+			<a class="sicon big bg_color3" href="http://www.360buy.com" target="_new"
+			style="background-image: url(img/icon/jingdong.png)">
+			<div class="text1">京东商城</div>
+			</a>
+			
+			<a  class="sicon small bg_color6" href="http://idv.eeyes.net/" target="_new"
+			style="background-image: url(img/icon/ying.png)">
+			<div class="text1">爱影视</div>
+			</a>
+			
+			<a  class="sicon small bg_color9" href="http://music.eeyes.net/" target="_new"
+			style="background-image: url(img/icon/music.png)">
+			<div class="text1" >悦酷FM</div>
+			</a>
+			
+			</div>
+			
+			
+			<div class="sicon large bg_color3">
+			<a href="http://www.xjtu.edu.cn/" target="_new" ></a>
+			</div>
+			
+			<a  class="sicon small bg_color7" href="http://www.dangdang.com" target="_new"
+			style="background-image: url(img/icon/dangdang.png)">
+			<div class="text1">当当网</div>
+			</a>
+			
+			<a  class="sicon small bg_color11" href="http://www.vancl.com" target="_new"
+			style="background-image: url(img/icon/vancl.png)">
+			<div class="text1">凡客诚品</div>
+			</a>
+			
+			<a class="sicon big bg_color7" href="http://202.117.1.11" target="_new"
+			style="background-image: ">
+			<div class="text1">ipv6</div>
+			</a>
+			
+			<a class="sicon big bg_color10" href="http://www.flymeal.cn/" target="_new"
+			style="background-image: url(img/icon/flymeal.png)">
+			<div class="text1" >飞饭</div>
+			</a>
+			
+			<a  class="sicon small bg_color3" href="http://bt.neu6.edu.cn/" target="_new"
+			style="background-image: url(img/icon/search.png)">
+			<div class="text1">六维空间</div>
+			</a>
+			
+			<a  class="sicon small bg_color10" href="http://bt.byr.cn/" target="_new"
+			style="background-image: url(img/icon/beiyouren.png)">
+			<div class="text1">北邮人</div>
+			</a>
+			
+			<a class="sicon big bg_color12" href="http://www.paomiangou.com/" target="_new"
+			style="background-image: url(img/icon/paomiango.png)">
+			<div class="text1">泡面购</div>
+			</a>
+			
+			<a class="sicon big bg_color2" href="http://www.hao123.com/" target="_new"
+			style="background-image: url(img/icon/hao123.png)">
+			<div class="text1">网址之家</div>
+			</a>
+			
+			</div>
+			
+			<div id="box5">
+			
+			<a class="sicon big bg_color9" href="http://www.renren.com" target="_new"
+			style="background-image: url(img/icon/renren.png)">
+			<div class="text1">人人网</div>
+			</a>
+			
+			<a class="sicon big bg_color2" href="http://weibo.com/" target="_new"
+			style="background-image: url(img/icon/xinlang.png)">
+			<div class="text1">新浪微博</div>
+			</a>
+			
+			<a  class="sicon small bg_color10" href="https://mail.google.com/" target="_new"
+			style="background-image: url(img/icon/gmail.png)">
+			<div class="text1">gmail邮箱</div>
+			</a>
+			
+			<a  class="sicon small bg_color7" href="http://email.163.com/" target="_new"
+			style="background-image: url(img/icon/wangyi.png)">
+			<div class="text1">163邮箱</div>
+			</a>
+			
+			<a class="sicon big bg_color3" href="http://web.qq.com/" target="_new"
+			style="background-image: url(img/icon/qq.png)">
+			<div class="text1">WebQQ</div>
+			</a>
+			
+			<a  class="sicon small bg_color11" href="http://upan.eeyes.net/" target="_new"
+			style="background-image: url(img/icon/yipan.png)">
+			<div class="text1">云U盘</div>
+			</a>
+			
+			<a  class="sicon small bg_color5" href="http://pan.baidu.com/" target="_new"
+			style="background-image: url(img/icon/wangpan.png)">
+			<div class="text1" >百度网盘</div>
+			</a>
+			
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
